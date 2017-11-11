@@ -23,7 +23,7 @@
         <div class="character block-border">
             <div class="body-container">
                 <div class="body-img">
-                    <img src="{{character.body}}" alt="">
+                    <img src="{{body_color[character.body]}}" alt="">
                 </div>
             </div>
         </div>
@@ -92,17 +92,13 @@
                         </div>
                         <div class="color-selector">
                             <div class="title">
-                                Color
+                                Body color
                             </div>
                             <div class="row p-l-15">
-                                <div class="color block-border" ng-click="character.body='../img/body/01.png'">1</div>
-                                <div class="color block-border" ng-click="character.body='../img/body/02.png'">2</div>
-                                <div class="color block-border" ng-click="character.body='../img/body/03.png'">3</div>
-                                <div class="color block-border" ng-click="character.body='../img/body/04.png'">4</div>
-                                <div class="color block-border" ng-click="character.body='../img/body/05.png'">5</div>
-                                <div class="color block-border" ng-click="character.body='../img/body/06.png'">6</div>
-                                <div class="color block-border" ng-click="character.body='../img/body/07.png'">7</div>
-                                <div class="color block-border" ng-click="character.body='../img/body/08.png'">8</div>
+                                <div ng-repeat="color in body_color" class="color block-border pointer"
+                                     ng-class="{active:character.body===$index}" ng-click="character.body=$index">
+                                    {{$index+1}}
+                                </div>
                             </div>
                         </div>
                     </div>

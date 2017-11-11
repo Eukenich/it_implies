@@ -15,6 +15,11 @@
     width: 25px;
     height: 25px;
 }
+
+ .active{
+    background: forestgreen !important;
+}
+
 .eye-selector .eye{
     height: 50px;
     width: 50px;
