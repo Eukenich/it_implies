@@ -1,0 +1,25 @@
+.character {
+    margin-left: 15px;
+    height: 100%;
+}
+
+.instrumental-panel {
+    width: 95%;
+    padding-left: 5px;
+}
+
+.instrumental-panel .right-menu {
+    padding-left: 0px;
+}
+.color-selector .color{
+    width: 25px;
+    height: 25px;
+}
+.eye-selector .eye{
+    height: 50px;
+    width: 50px;
+}
+.body-container .body-img img{
+    width: 70% !important;
+    margin-left: 15%;
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html ng-app="dress">
+<head>
+    <title>It implies</title>
+    <script src="https://use.fontawesome.com/d577c66120.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="../main.css">
+
+</head>
+
+
+<body ng-controller="dressCtrl">
+<a href="../index.html">home</a>
+<h1>Dress up</h1>
+<div class="row">
+    <div class="col-md-8">
+        <div class="character block-border">
+            <div class="body-container">
+                <div class="body-img">
+                    <img src="{{character.body}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 ">
+        <div class="instrumental-panel block-border">
+            <div class="row">
+                <div class="col-md-11">
+                    <div ng-if="clothes_layer===1">
+                        <div class="row p-l-15">
+                            <button ng-click="clothes_type='hair'">hair</button>
+                            <button ng-click="clothes_type='eye'">eye</button>
+                            <button ng-click="clothes_type='eyebrows'">eyebrows</button>
+                            <button ng-click="clothes_type='nose'">nose</button>
+                            <button ng-click="clothes_type='lips'">lips</button>
+                            <button ng-click="clothes_type='ears'">ears</button>
+                            <button ng-click="clothes_type='scars'">scars</button>
+                        </div>
+                        <div class="eye" ng-if="clothes_type==='eye'">
+                            <div class="panel">
+                                <div class="elem col-md-4 block-border">
+                                    2
+                                </div>
+                            </div>
+                            <div class="color-selector">
+                                <div class="title">
+                                    Color
+                                </div>
+                                <div class="row p-l-15">
+                                    <div class="color block-border"></div>
+                                    <div class="color block-border"></div>
+                                    <div class="color block-border"></div>
+                                    <div class="color block-border"></div>
+                                    <div class="color block-border"></div>
+                                    <div class="color block-border"></div>
+                                    <div class="color block-border"></div>
+                                </div>
+                            </div>
+                            <div class="eye-selector">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="title"> Right</div>
+                                        <div class="eye block-border"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="title"> Left</div>
+
+                                        <div class="eye block-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nose" ng-if="clothes_type==='nose'">2</div>
+                        <div class="eyebrows" ng-if="clothes_type==='eyebrows'">3</div>
+                        <div class="ears" ng-if="clothes_type==='ears'">4</div>
+                        <div class="hair" ng-if="clothes_type==='hair'">5</div>
+                        <div class="scars" ng-if="clothes_type==='scars'">6</div>
+                    </div>
+                    <div ng-if="clothes_layer===2">
+                        <div class="row p-l-15">
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                        </div>
+                        <div class="color-selector">
+                            <div class="title">
+                                Color
+                            </div>
+                            <div class="row p-l-15">
+                                <div class="color block-border" ng-click="character.body='../img/body/01.png'">1</div>
+                                <div class="color block-border" ng-click="character.body='../img/body/02.png'">2</div>
+                                <div class="color block-border" ng-click="character.body='../img/body/03.png'">3</div>
+                                <div class="color block-border" ng-click="character.body='../img/body/04.png'">4</div>
+                                <div class="color block-border" ng-click="character.body='../img/body/05.png'">5</div>
+                                <div class="color block-border" ng-click="character.body='../img/body/06.png'">6</div>
+                                <div class="color block-border" ng-click="character.body='../img/body/07.png'">7</div>
+                                <div class="color block-border" ng-click="character.body='../img/body/08.png'">8</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="clothes_layer===3">
+                        <div>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                        </div>
+                    </div>
+                    <div ng-if="clothes_layer===4">
+                        <div>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                        </div>
+                    </div>
+                    <div ng-if="clothes_layer===5">
+                        <div>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 right-menu">
+                    <button ng-click="clothes_layer=1">face</button>
+                    <button ng-click="clothes_layer=2">body</button>
+                    <button ng-click="clothes_layer=3">3</button>
+                    <button ng-click="clothes_layer=4">4</button>
+                    <button ng-click="clothes_layer=5">5</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
