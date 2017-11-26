@@ -24,7 +24,7 @@
     height: 50px;
     width: 50px;
 }
-.body-container .body-img img{
+.body-container  {
     width: 70% !important;
     margin-left: 15%;
 }
